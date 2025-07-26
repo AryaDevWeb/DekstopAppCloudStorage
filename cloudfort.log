@@ -1,0 +1,287 @@
+2025-05-21 21:52:26,632 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-21 21:53:02,238 - INFO - Backed up users.json to users.bak
+2025-05-21 21:53:02,241 - INFO - Successfully saved users to users.json
+2025-05-21 21:53:02,242 - INFO - Created user folder: CloudFort\Arya
+2025-05-21 21:53:02,243 - INFO - Created session for Arya
+2025-05-21 21:53:02,299 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-21 21:53:02,318 - INFO - Session expired
+2025-05-21 21:53:02,369 - ERROR - Session loading error: [WinError 32] The process cannot access the file because it is being used by another process: 'session.json'
+2025-05-21 21:55:19,818 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-21 21:56:07,598 - INFO - Backed up users.json to users.bak
+2025-05-21 21:56:07,601 - INFO - Successfully saved users to users.json
+2025-05-21 21:56:07,602 - INFO - Created user folder: CloudFort\Arya
+2025-05-21 21:56:07,606 - INFO - Created session for Arya
+2025-05-21 21:56:07,657 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-21 21:56:07,662 - INFO - Session expired
+2025-05-21 21:56:07,663 - ERROR - Session loading error: [WinError 32] The process cannot access the file because it is being used by another process: 'session.json'
+2025-05-21 22:04:16,686 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-21 22:04:31,814 - INFO - Backed up users.json to users.bak
+2025-05-21 22:04:31,816 - INFO - Successfully saved users to users.json
+2025-05-21 22:04:31,818 - INFO - Created session for Arya
+2025-05-21 22:04:31,838 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-21 22:04:31,840 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    }
+  }
+2025-05-21 22:04:33,976 - INFO - Cloudinary configured successfully
+2025-05-21 22:04:33,977 - INFO - Successfully loaded user data for Arya
+2025-05-21 22:04:36,583 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Arya
+2025-05-22 07:49:15,828 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 07:49:16,555 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 07:49:16,557 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    }
+  }
+2025-05-22 07:49:16,561 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C75E59C980>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /v1_1/ddz5n7ykw/ping
+2025-05-22 07:49:16,563 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C75E5982D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /v1_1/ddz5n7ykw/ping
+2025-05-22 07:49:16,565 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C75E598690>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /v1_1/ddz5n7ykw/ping
+2025-05-22 07:49:16,582 - ERROR - Cloudinary API ping failed: Unexpected error TCPKeepAliveHTTPSConnectionPool(host='api.cloudinary.com', port=443): Max retries exceeded with url: /v1_1/ddz5n7ykw/ping (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C75E598910>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-05-22 07:49:16,582 - ERROR - Failed to configure Cloudinary: Invalid Cloudinary credentials: Unexpected error TCPKeepAliveHTTPSConnectionPool(host='api.cloudinary.com', port=443): Max retries exceeded with url: /v1_1/ddz5n7ykw/ping (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001C75E598910>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-05-22 07:49:18,715 - INFO - Successfully loaded user data for Arya
+2025-05-22 07:49:49,029 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 07:49:49,643 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 07:49:49,643 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    }
+  }
+2025-05-22 07:49:51,329 - INFO - Cloudinary configured successfully
+2025-05-22 07:49:51,332 - INFO - Successfully loaded user data for Arya
+2025-05-22 07:49:52,381 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Arya
+2025-05-22 07:50:04,109 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 07:50:20,620 - INFO - Backed up users.json to users.bak
+2025-05-22 07:50:20,622 - INFO - Successfully saved users to users.json
+2025-05-22 07:50:20,666 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 07:50:20,668 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    }
+  }
+2025-05-22 07:50:21,025 - INFO - Cloudinary configured successfully
+2025-05-22 07:50:21,027 - INFO - Successfully loaded user data for qnyang797
+2025-05-22 07:50:22,020 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/qnyang797
+2025-05-22 09:58:42,517 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 10:00:05,099 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 12:24:35,514 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 12:24:51,462 - INFO - Backed up users.json to users.bak
+2025-05-22 12:24:51,464 - INFO - Successfully saved users to users.json
+2025-05-22 12:24:51,501 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 12:24:51,505 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    }
+  }
+2025-05-22 12:24:53,215 - INFO - Cloudinary configured successfully
+2025-05-22 12:24:53,217 - INFO - Successfully loaded user data for qnyang797
+2025-05-22 12:24:54,681 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/qnyang797
+2025-05-22 12:35:19,259 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 12:36:00,025 - INFO - Backed up users.json to users.bak
+2025-05-22 12:36:00,029 - INFO - Successfully saved users to users.json
+2025-05-22 12:36:00,030 - INFO - Created user folder: CloudFort\Kai
+2025-05-22 12:36:00,031 - INFO - Created session for Kai
+2025-05-22 12:36:00,091 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 12:36:00,642 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 12:36:00,646 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    }
+  }
+2025-05-22 12:36:00,664 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000280DBB9CAD0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /v1_1/ddz5n7ykw/ping
+2025-05-22 12:36:00,674 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000280DBBC6350>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /v1_1/ddz5n7ykw/ping
+2025-05-22 12:36:00,678 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000280DBBC6710>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed')': /v1_1/ddz5n7ykw/ping
+2025-05-22 12:36:00,684 - ERROR - Cloudinary API ping failed: Unexpected error TCPKeepAliveHTTPSConnectionPool(host='api.cloudinary.com', port=443): Max retries exceeded with url: /v1_1/ddz5n7ykw/ping (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000280DBBC6990>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-05-22 12:36:00,691 - ERROR - Failed to configure Cloudinary: Invalid Cloudinary credentials: Unexpected error TCPKeepAliveHTTPSConnectionPool(host='api.cloudinary.com', port=443): Max retries exceeded with url: /v1_1/ddz5n7ykw/ping (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000280DBBC6990>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-05-22 12:36:04,157 - INFO - Successfully loaded user data for Kai
+2025-05-22 17:55:12,104 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 17:55:12,799 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 17:55:12,800 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    }
+  }
+2025-05-22 17:55:15,040 - INFO - Cloudinary configured successfully
+2025-05-22 17:55:15,041 - INFO - Successfully loaded user data for Kai
+2025-05-22 17:55:16,336 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 17:57:18,826 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 17:57:19,374 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 17:57:19,375 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    }
+  }
+2025-05-22 17:57:21,593 - INFO - Cloudinary configured successfully
+2025-05-22 17:57:21,594 - INFO - Successfully loaded user data for Kai
+2025-05-22 17:57:23,215 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 17:57:23,411 - ERROR - Error loading profile picture: 'MainView' object has no attribute 'profile_label'
+2025-05-22 17:58:49,019 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 17:58:49,581 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 17:58:49,585 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    }
+  }
+2025-05-22 17:58:51,278 - INFO - Cloudinary configured successfully
+2025-05-22 17:58:51,279 - INFO - Successfully loaded user data for Kai
+2025-05-22 17:58:52,355 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 17:59:16,236 - WARNING - Invalid JSON in users.json during save: Expecting value: line 1 column 1 (char 0). Overwriting with new data.
+2025-05-22 17:59:16,238 - INFO - Successfully saved user data for Kai
+2025-05-22 17:59:50,972 - WARNING - Invalid JSON in users.json during save: Expecting value: line 1 column 1 (char 0). Overwriting with new data.
+2025-05-22 17:59:50,974 - INFO - Successfully saved user data for Kai
+2025-05-22 18:00:15,957 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 19:05:20,972 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 19:05:21,516 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 19:05:21,517 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    },
+    "storage_limit_mb": 100
+  }
+2025-05-22 19:05:24,287 - INFO - Cloudinary configured successfully
+2025-05-22 19:05:24,288 - INFO - Successfully loaded user data for Kai
+2025-05-22 19:05:25,366 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 19:39:25,984 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 19:39:26,523 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 19:39:26,524 - INFO - Config file content: {
+    "cloudinary": {
+      "cloud_name": "ddz5n7ykw",
+      "api_key": "848311496262211",
+      "api_secret": "F_vesavrK9leKVWsR_1sVaXIMxs"
+    },
+    "storage_limit_mb": 100
+  }
+2025-05-22 19:39:29,937 - INFO - Cloudinary configured successfully
+2025-05-22 19:39:29,938 - INFO - Successfully loaded user data for Kai
+2025-05-22 19:39:31,740 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 20:08:37,220 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 20:08:37,765 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 20:08:43,424 - INFO - Cloudinary configured successfully
+2025-05-22 20:08:43,425 - INFO - Storage limit set to 100.0 MB
+2025-05-22 20:08:43,426 - INFO - Successfully loaded user data for Kai
+2025-05-22 20:08:45,913 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 20:09:01,389 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 20:09:10,698 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 20:09:13,204 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 20:09:14,792 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 21:30:55,424 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 21:30:55,963 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 21:30:57,860 - INFO - Cloudinary configured successfully
+2025-05-22 21:30:57,861 - INFO - Storage limit set to 100.0 MB
+2025-05-22 21:30:57,862 - INFO - Successfully loaded user data for Kai
+2025-05-22 21:30:59,176 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Kai
+2025-05-22 21:31:04,867 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 21:31:39,808 - ERROR - Missing field email for user Kai
+2025-05-22 21:31:48,975 - ERROR - Missing field email for user Kai
+2025-05-22 21:37:01,954 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 21:37:31,871 - INFO - Backed up users.json to users.bak
+2025-05-22 21:37:31,873 - INFO - Successfully saved users to users.json
+2025-05-22 21:37:31,874 - INFO - Created user folder: CloudFort\Angga
+2025-05-22 21:37:31,874 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 21:37:34,762 - INFO - Cloudinary configured successfully
+2025-05-22 21:37:34,763 - INFO - Storage limit set to 100.0 MB
+2025-05-22 21:37:35,110 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:37:37,209 - INFO - Created session for Angga
+2025-05-22 21:37:37,252 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 21:37:37,783 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 21:37:38,084 - INFO - Cloudinary configured successfully
+2025-05-22 21:37:38,084 - INFO - Storage limit set to 100.0 MB
+2025-05-22 21:37:38,085 - INFO - Successfully loaded user data for Angga
+2025-05-22 21:37:39,190 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:37:57,891 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:38:00,749 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:38:23,178 - WARNING - Invalid JSON in users.json during save: Expecting value: line 1 column 1 (char 0). Overwriting with new data.
+2025-05-22 21:38:23,180 - INFO - Successfully saved user data for Angga
+2025-05-22 21:38:46,991 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:38:55,396 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:39:06,929 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:39:08,635 - WARNING - Invalid JSON in users.json during save: Expecting value: line 1 column 1 (char 0). Overwriting with new data.
+2025-05-22 21:39:08,639 - ERROR - Error saving user data: Object of type datetime is not JSON serializable
+2025-05-22 21:39:24,562 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:39:46,140 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:40:07,684 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:40:09,687 - WARNING - Invalid JSON in users.json during save: Expecting value: line 1 column 1 (char 0). Overwriting with new data.
+2025-05-22 21:40:09,690 - ERROR - Error saving user data: Object of type datetime is not JSON serializable
+2025-05-22 21:40:21,610 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:40:49,819 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:40:51,935 - WARNING - Invalid JSON in users.json during save: Expecting value: line 1 column 1 (char 0). Overwriting with new data.
+2025-05-22 21:40:51,938 - ERROR - Error saving user data: Object of type datetime is not JSON serializable
+2025-05-22 21:40:58,980 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:41:08,432 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:56:14,983 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 21:56:15,517 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 21:56:17,541 - INFO - Cloudinary configured successfully
+2025-05-22 21:56:17,542 - INFO - Storage limit set to 100.0 MB
+2025-05-22 21:56:17,543 - INFO - Successfully loaded user data for Angga
+2025-05-22 21:56:18,537 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:56:29,713 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:56:33,416 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:56:37,330 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:56:42,572 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:57:56,458 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:57:59,844 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 21:57:59,945 - WARNING - Invalid JSON in users.json during save: Expecting value: line 1 column 1 (char 0). Overwriting with new data.
+2025-05-22 21:57:59,948 - ERROR - Error saving user data: Object of type datetime is not JSON serializable
+2025-05-22 21:58:18,871 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga/looping
+2025-05-22 21:58:32,525 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga/looping
+2025-05-22 21:58:49,915 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga/looping
+2025-05-22 21:58:51,177 - WARNING - Invalid JSON in users.json during save: Expecting value: line 1 column 1 (char 0). Overwriting with new data.
+2025-05-22 21:58:51,180 - ERROR - Error saving user data: Object of type datetime is not JSON serializable
+2025-05-22 21:59:41,497 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga/looping
+2025-05-22 22:00:04,387 - WARNING - Invalid JSON in users.json during save: Expecting value: line 1 column 1 (char 0). Overwriting with new data.
+2025-05-22 22:00:04,390 - ERROR - Error saving user data: Object of type datetime is not JSON serializable
+2025-05-22 22:00:12,168 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 22:00:15,048 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 22:00:25,881 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga/looping
+2025-05-22 22:00:38,615 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-22 22:22:48,575 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-22 22:22:48,578 - WARNING - Invalid JSON in users.json: Expecting value: line 16 column 7 (char 373). Creating new empty file.
+2025-05-22 22:22:49,116 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-22 22:22:51,146 - INFO - Cloudinary configured successfully
+2025-05-22 22:22:51,146 - INFO - Storage limit set to 100.0 MB
+2025-05-22 22:22:51,147 - INFO - Successfully loaded user data for Angga
+2025-05-22 22:22:52,126 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-23 07:32:12,455 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-23 07:40:00,903 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-23 07:40:01,696 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-23 07:40:03,742 - INFO - Cloudinary configured successfully
+2025-05-23 07:40:03,743 - INFO - Storage limit set to 100.0 MB
+2025-05-23 07:40:03,745 - INFO - Successfully loaded user data for Angga
+2025-05-23 07:40:05,379 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-23 07:40:14,214 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-23 07:54:22,653 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-23 07:55:29,518 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-23 07:55:42,027 - INFO - Backed up users.json to users.bak
+2025-05-23 07:55:42,030 - INFO - Successfully saved users to users.json
+2025-05-23 07:55:42,032 - INFO - Created session for Angga
+2025-05-23 07:55:42,049 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-23 07:55:43,771 - INFO - Cloudinary configured successfully
+2025-05-23 07:55:43,772 - INFO - Storage limit set to 100.0 MB
+2025-05-23 07:55:43,774 - INFO - Successfully loaded user data for Angga
+2025-05-23 07:55:45,164 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga
+2025-05-28 11:16:01,329 - INFO - AuthView parent type: CTkFrame, controller type: NebulaApp
+2025-05-28 11:16:03,689 - INFO - Attempting to read config from: C:\Users\Administrator\Desktop\CloudApp\config.json
+2025-05-28 11:16:06,795 - INFO - Cloudinary configured successfully
+2025-05-28 11:16:06,796 - INFO - Storage limit set to 100.0 MB
+2025-05-28 11:16:06,800 - INFO - Successfully loaded user data for Angga
+2025-05-28 11:16:10,825 - ERROR - Error listing folders: Error 404 - Can't find folder with path CloudFort/Angga

@@ -1,0 +1,16 @@
+{
+  "Angga": {
+    "email": "angga@gmail.com",
+    "password": {
+      "salt": "mKrpRfW4ubMiz80LeHZdOHEcz1qRZLBESXrFUU7EwdI=",
+      "hash": "uruMxMi3O9wD544J//9fWmNe6OsXk3nAA3OOUYtO8pw="
+    },
+    "auth_type": "local",
+    "created_at": "2025-05-22T22:30:06.226028",
+    "last_login": "2025-05-23T07:55:42.026274",
+    "failed_attempts": 0,
+    "favorites": [],
+    "recent_files": [],
+    "picture": ""
+  }
+}
