@@ -13,75 +13,130 @@
             font-family: 'Segoe UI', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background: linear-gradient(135deg, #e0e7ef 0%, #f7e9ec 100%);
+            min-height: 100vh;
         }
         header {
-            background: #333;
+            background: #6c7a89;
             color: #fff;
-            padding: 20px;
+            padding: 32px 20px 24px 20px;
             text-align: center;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 4px 24px rgba(108,122,137,0.10);
+            animation: fadeInDown 1s;
         }
         nav {
-            background: #222;
+            background: #566573;
             padding: 0;
             display: flex;
             justify-content: center;
             gap: 30px;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 2px 8px rgba(86,101,115,0.08);
             flex-wrap: wrap;
+            margin-bottom: 10px;
         }
         nav a {
             color: #fff;
             text-decoration: none;
             padding: 16px 20px;
             font-weight: 500;
-            transition: background 0.2s, color 0.2s;
-            border-radius: 6px 6px 0 0;
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            border-radius: 8px 8px 0 0;
             font-size: 16px;
             display: block;
         }
         nav a:hover, nav a:focus {
-            background: #fff;
-            color: #222;
+            background: #d6dbdf;
+            color: #566573;
+            transform: translateY(-2px) scale(1.05);
         }
         section {
-            margin: 20px auto;
+            margin: 28px auto;
             max-width: 800px;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #f9fafb;
+            padding: 28px 24px;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(108,122,137,0.08);
+            animation: fadeInUp 1.2s;
         }
+        h1, h2, h3 {
+            font-family: 'Segoe UI', sans-serif;
+        }
+        h1 {
+            font-size: 2.3em;
+            margin-bottom: 0.2em;
+            letter-spacing: 1px;
+        }
+        h2 {
+            color: #6c7a89;
+            margin-top: 0;
+        }
+        h3 {
+            color: #566573;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 16px;
+            color: #888;
+            font-size: 15px;
+            background: #eaecee;
+            border-radius: 16px 16px 0 0;
+            margin: 32px auto 0 auto;
+            max-width: 800px;
+            box-shadow: 0 2px 12px rgba(108,122,137,0.06);
+            animation: fadeIn 2s;
+        }
+        /* Animasi */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        /* Responsive */
         @media (max-width: 900px) {
-            section {
-                max-width: 95vw;
-                padding: 16px;
+            section, footer {
+                max-width: 97vw;
+                padding: 18px;
             }
         }
         @media (max-width: 600px) {
             nav {
                 flex-direction: column;
                 gap: 0;
-                border-radius: 0 0 8px 8px;
+                border-radius: 0 0 12px 12px;
             }
             nav a {
                 border-radius: 0;
-                border-bottom: 1px solid #444;
+                border-bottom: 1px solid #8884;
                 font-size: 15px;
                 padding: 14px 0;
             }
             header {
-                padding: 14px;
+                padding: 18px 8px 12px 8px;
             }
             section {
                 padding: 12px;
             }
             h1 {
-                font-size: 1.5em;
+                font-size: 1.4em;
             }
             h2 {
-                font-size: 1.2em;
+                font-size: 1.1em;
+            }
+            footer {
+                font-size: 13px;
+                padding: 10px;
             }
         }
     </style>
