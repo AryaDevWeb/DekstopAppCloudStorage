@@ -24,33 +24,42 @@
             border-radius: 0 0 24px 24px;
             box-shadow: 0 4px 24px rgba(108,122,137,0.10);
             animation: fadeInDown 1s;
+            position: relative;
         }
-        nav {
-            background: #566573;
-            padding: 0;
+
+        /* Navbar Dasar */
+        .menu-toggle {
+            display: none;
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            font-size: 2em;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .nav {
             display: flex;
             justify-content: center;
             gap: 30px;
-            border-radius: 0 0 12px 12px;
-            box-shadow: 0 2px 8px rgba(86,101,115,0.08);
-            flex-wrap: wrap;
-            margin-bottom: 10px;
         }
-        nav a {
+        /* Link style nav */
+        .nav a {
             color: #fff;
             text-decoration: none;
             padding: 16px 20px;
             font-weight: 500;
-            transition: background 0.2s, color 0.2s, transform 0.2s;
+            transition: background 0.2s, transform 0.2s;
             border-radius: 8px 8px 0 0;
-            font-size: 16px;
-            display: block;
         }
-        nav a:hover, nav a:focus {
+        .nav a:hover, .nav a:focus {
             background: #d6dbdf;
             color: #566573;
             transform: translateY(-2px) scale(1.05);
         }
+
         section {
             margin: 28px auto;
             max-width: 800px;
@@ -103,37 +112,48 @@
             from { opacity: 0;}
             to { opacity: 1;}
         }
-        /* Responsive */
+        /* Responsive: layar <= 900px */
         @media (max-width: 900px) {
             section, footer {
                 max-width: 97vw;
                 padding: 18px;
             }
         }
+        /* Responsive: layar <= 600px */
         @media (max-width: 600px) {
-            nav {
+            .nav {
                 flex-direction: column;
+                background: #566573;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease-in;
                 gap: 0;
                 border-radius: 0 0 12px 12px;
-                display: none;
-                position: absolute;
-                width: 100vw;
-                left: 0;
-                top: 60px;
-                background: #566573;
                 box-shadow: 0 2px 8px rgba(86,101,115,0.08);
             }
-            nav.active {
-                display: flex;
+            .nav a {
+                padding: 12px;
+                text-align: center;
+                width: 100%;
+                border-radius: 0;
+                border-bottom: 1px solid #8884;
+                font-size: 15px;
             }
             .menu-toggle {
                 display: block;
             }
-            header {
-                position: relative;
+            .nav-toggle {
+                display: none;
+            }
+            .nav-toggle:checked ~ .nav {
+                max-height: 300px; /* atur sesuai jumlah link */
             }
             header {
-                padding: 18px 8px 12px 8px;
+                padding: 48px 8px 12px 8px;
             }
             section {
                 padding: 12px;
@@ -149,24 +169,13 @@
                 padding: 10px;
             }
         }
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 2em;
-            color: #fff;
-            position: absolute;
-            right: 24px;
-            top: 24px;
-            z-index: 1001;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
     <header>
-        <button class="menu-toggle" aria-label="Buka Menu" onclick="toggleMenu()">&#9776;</button>
-        <nav id="mainNav">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="menu-toggle" aria-label="Toggle menu">&#9776;</label>
+        <nav id="mainNav" class="nav">
             <a href="#tentang">Tentang</a>
             <a href="#proyek">Proyek</a>
             <a href="#blog">Blog</a>
@@ -211,13 +220,8 @@
         <p>Email: acchaveam@gmail.com</p>
     </section>
 
-    <footer style="text-align: center; padding: 10px; color: #888; font-size: 14px;">
+    <footer>
         © 2025 Angga Ariya Saputra. Dibuat dengan HTML & CSS.
     </footer>
-    <script>
-        function toggleMenu() {
-            document.getElementById('mainNav').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
