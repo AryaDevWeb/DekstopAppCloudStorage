@@ -9,8 +9,18 @@
         html {
             scroll-behavior: smooth;
         }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-        header { background: #333; color: #fff; padding: 20px; text-align: center; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
         nav {
             background: #222;
             padding: 0;
@@ -19,6 +29,7 @@
             gap: 30px;
             border-radius: 0 0 8px 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            flex-wrap: wrap;
         }
         nav a {
             color: #fff;
@@ -28,12 +39,51 @@
             transition: background 0.2s, color 0.2s;
             border-radius: 6px 6px 0 0;
             font-size: 16px;
+            display: block;
         }
         nav a:hover, nav a:focus {
             background: #fff;
             color: #222;
         }
-        section { margin: 20px auto; max-width: 800px; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        section {
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        @media (max-width: 900px) {
+            section {
+                max-width: 95vw;
+                padding: 16px;
+            }
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 0;
+                border-radius: 0 0 8px 8px;
+            }
+            nav a {
+                border-radius: 0;
+                border-bottom: 1px solid #444;
+                font-size: 15px;
+                padding: 14px 0;
+            }
+            header {
+                padding: 14px;
+            }
+            section {
+                padding: 12px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -47,12 +97,15 @@
         <h1>Angga Ariya Saputra</h1>
         <p>Web Developer | FullStack</p>
     </header>
+
     <section id="tentang">
         <h2>Tentang Saya</h2>
-        <p>Saya siswa di sekolah SMKN 1 LUMAJANG jurusan RPL (Rekayasa Perangkat Lunak). Saya memiliki minat yang besar dalam pengembangan web dan aplikasi.<br> 
+        <p>
+            Saya siswa di sekolah SMKN 1 LUMAJANG jurusan RPL (Rekayasa Perangkat Lunak). Saya memiliki minat yang besar dalam pengembangan web dan aplikasi.<br>
             Saya telah mengerjakan beberapa proyek yang menunjukkan kemampuan saya dalam membangun aplikasi berbasis cloud.
         </p>
     </section>
+
     <section id="proyek">
         <h2>Proyek</h2>
         <ul>
@@ -60,6 +113,7 @@
             <li>Proyek Website Cloud</li>
         </ul>
     </section>
+
     <section id="blog">
         <h2>Blog</h2>
         <article style="margin-bottom: 20px;">
@@ -73,12 +127,14 @@
             <p>CSS membuat tampilan website menjadi menarik dan responsif. Pelajari selector, box model, dan layout agar website kamu lebih profesional.</p>
         </article>
     </section>
+
     <section id="kontak">
         <h2>Kontak</h2>
         <p>Email: acchaveam@gmail.com</p>
     </section>
+
+    <footer style="text-align: center; padding: 10px; color: #888; font-size: 14px;">
+        © 2025 Angga Ariya Saputra. Dibuat dengan HTML & CSS.
+    </footer>
 </body>
-<footer style="text-align: center; padding: 10px; color: #888; font-size: 14px;">
-    © 2025 Angga Ariya Saputra. Dibuat dengan HTML & CSS.
-</footer>
 </html>
