@@ -4,228 +4,885 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portofolio Angga Ariya Saputra - Full Stack Web Developer dari SMKN 1 Lumajang.">
-    <title>Portofolio Saya</title>
+    <meta name="keywords" content="web developer, fullstack, PHP, HTML, CSS, JavaScript, portfolio">
+    <meta name="author" content="Angga Ariya Saputra">
+    <title>Angga Ariya Saputra | Full Stack Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        html {
-            scroll-behavior: smooth;
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f8fafc;
+            --bg-dark: #0f172a;
+            --card-bg: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.15);
+            --border-radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        body {
-            font-family: 'Segoe UI', sans-serif;
+
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #e0e7ef 0%, #f7e9ec 100%);
-            min-height: 100vh;
+            box-sizing: border-box;
         }
-        header {
-            background: #6c7a89;
-            color: #fff;
-            padding: 32px 20px 24px 20px;
-            text-align: center;
-            border-radius: 0 0 24px 24px;
-            box-shadow: 0 4px 24px rgba(108,122,137,0.10);
-            animation: fadeInDown 1s;
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin-left: auto;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: var(--transition);
             position: relative;
         }
 
+        .nav-link:hover {
+            color: var(--primary-color);
+            background: rgba(37, 99, 235, 0.1);
+        }
 
-        .menu-toggle {
+        .mobile-menu-toggle {
             display: none;
-            position: absolute;
-            top: 18px;
-            right: 20px;
-            font-size: 2em;
             background: none;
             border: none;
-            color: #fff;
+            font-size: 1.5rem;
             cursor: pointer;
-            z-index: 1000;
+            color: var(--text-dark);
+            padding: 0.5rem;
         }
-        .nav {
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffffff, #f0f9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .main {
+            background: var(--bg-light);
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Card Components */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .about-text h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .project-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            position: relative;
+        }
+
+        .blog-date {
+            color: var(--accent-color);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .blog-card h3 a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        .blog-card h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--text-dark) 0%, #374151 100%);
+            color: white;
+        }
+
+        .contact .section-title h2 {
+            color: white;
+        }
+
+        .contact .section-title p {
+            color: #d1d5db;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(20px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-dark);
+            color: #d1d5db;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .social-links {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 1rem;
+            margin-bottom: 1rem;
         }
-        
 
-        .nav a {
-            color: #fff;
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
             text-decoration: none;
-            padding: 16px 20px;
-            font-weight: 500;
-            transition: background 0.2s, transform 0.2s;
-            border-radius: 8px 8px 0 0;
-        }
-        .nav a:hover, .nav a:focus {
-            background: #d6dbdf;
-            color: #566573;
-            transform: translateY(-2px) scale(1.05);
+            transition: var(--transition);
         }
 
-        section {
-            margin: 28px auto;
-            max-width: 800px;
-            background: #f9fafb;
-            padding: 28px 24px;
-            border-radius: 18px;
-            box-shadow: 0 4px 24px rgba(108,122,137,0.08);
-            animation: fadeInUp 1.2s;
+        .social-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-2px);
         }
-        h1, h2, h3 {
-            font-family: 'Segoe UI', sans-serif;
-        }
-        h1 {
-            font-size: 2.3em;
-            margin-bottom: 0.2em;
-            letter-spacing: 1px;
-        }
-        h2 {
-            color: #6c7a89;
-            margin-top: 0;
-        }
-        h3 {
-            color: #566573;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        footer {
-            text-align: center;
-            padding: 16px;
-            color: #888;
-            font-size: 15px;
-            background: #eaecee;
-            border-radius: 16px 16px 0 0;
-            margin: 32px auto 0 auto;
-            max-width: 800px;
-            box-shadow: 0 2px 12px rgba(108,122,137,0.06);
-            animation: fadeIn 2s;
-        }
-    
 
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-40px);}
-            to { opacity: 1; transform: translateY(0);}
-        }
+        /* Animations */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px);}
-            to { opacity: 1; transform: translateY(0);}
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        @keyframes fadeIn {
-            from { opacity: 0;}
-            to { opacity: 1;}
-        }
-        
 
-        @media (max-width: 900px) {
-            section, footer {
-                max-width: 97vw;
-                padding: 18px;
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
             }
         }
-        
-        
-        @media (max-width: 600px) {
-            .nav {
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
                 flex-direction: column;
-                background: #566573;
-                position: absolute;
-                top: 60px;
+                justify-content: flex-start;
+                align-items: center;
+                padding-top: 2rem;
+                transition: var(--transition);
+                border-top: 1px solid var(--border-color);
+            }
+
+            .nav-menu.active {
                 left: 0;
-                width: 100%;
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height 0.3s ease-in;
-                gap: 0;
-                border-radius: 0 0 12px 12px;
-                box-shadow: 0 2px 8px rgba(86,101,115,0.08);
             }
-            .nav a {
-                padding: 12px;
+
+            .nav-link {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+                width: 200px;
                 text-align: center;
-                width: 100%;
-                border-radius: 0;
-                border-bottom: 1px solid #8884;
-                font-size: 15px;
             }
-            .menu-toggle {
+
+            .mobile-menu-toggle {
                 display: block;
             }
-            .nav-toggle {
-                display: none;
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
             }
-            .nav-toggle:checked ~ .nav {
-                max-height: 300px;
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
             }
-            header {
-                padding: 48px 8px 12px 8px;
+
+            .projects-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
             }
-            section {
-                padding: 12px;
+
+            .section {
+                padding: 4rem 0;
             }
-            h1 {
-                font-size: 1.4em;
+
+            .container {
+                padding: 0 1rem;
             }
-            h2 {
-                font-size: 1.1em; 
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 5rem 1rem 3rem;
             }
-            footer {
-                font-size: 13px;
-                padding: 10px;
+
+            .nav-container {
+                padding: 0 1rem;
             }
+
+            .card {
+                padding: 1.5rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 1000;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
         }
     </style>
 </head>
 <body>
-    <header>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <label for="nav-toggle" class="menu-toggle" aria-label="Toggle menu">&#9776;</label>
-        <nav id="mainNav" class="nav">
-            <a href="#tentang">Tentang</a>
-            <a href="#proyek">Proyek</a>
-            <a href="#blog">Blog</a>
-            <a href="#kontak">Kontak</a>
-        </nav>
-        <h1>Angga Ariya Saputra</h1>
-        <p>Web Developer | FullStack</p>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-code"></i>
+                Angga Ariya
+            </a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#tentang" class="nav-link">Tentang</a></li>
+                    <li><a href="#proyek" class="nav-link">Proyek</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#kontak" class="nav-link">Kontak</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
     </header>
 
-    <section id="tentang">
-        <h2>Tentang Saya</h2>
-        <p>
-            Saya siswa di sekolah SMKN 1 LUMAJANG jurusan RPL (Rekayasa Perangkat Lunak). Saya memiliki minat yang besar dalam pengembangan web dan aplikasi.<br>
-            Saya telah mengerjakan beberapa proyek yang menunjukkan kemampuan saya dalam membangun aplikasi berbasis cloud.
-        </p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Angga Ariya Saputra</h1>
+            <p>Full Stack Web Developer | Siswa RPL SMKN 1 Lumajang</p>
+            <div class="hero-buttons">
+                <a href="#proyek" class="btn btn-primary">
+                    <i class="fas fa-eye"></i>
+                    Lihat Proyek
+                </a>
+                <a href="#kontak" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i>
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
     </section>
 
-    <section id="proyek">
-        <h2>Proyek</h2>
-        <ul>
-            <li>Proyek Aplikasi Cloud Dekstop</li>
-            <li>Proyek Website Cloud</li>
-        </ul>
-    </section>
+    <!-- Main Content -->
+    <main class="main">
+        <!-- About Section -->
+        <section id="tentang" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Tentang Saya</h2>
+                    <p>Pelajar yang passionate dalam dunia web development</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-image">
+                        <div style="width: 100%; height: 300px; background: linear-gradient(45deg, var(--primary-color), var(--accent-color)); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 4rem;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h3>Hello, Saya Angga!</h3>
+                        <p>
+                            Saya adalah siswa di SMKN 1 Lumajang jurusan Rekayasa Perangkat Lunak (RPL) yang memiliki passion mendalam dalam pengembangan web dan aplikasi. 
+                            Saya selalu antusias mempelajari teknologi terbaru dan menerapkannya dalam proyek-proyek yang saya kerjakan.
+                        </p>
+                        <p>
+                            Dengan fokus pada full-stack development, saya terus mengasah kemampuan dalam membangun aplikasi berbasis web yang modern dan user-friendly.
+                            Saya percaya bahwa teknologi dapat memberikan solusi untuk berbagai masalah di kehidupan sehari-hari.
+                        </p>
+                        <div class="skills">
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">PHP</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="blog">
-        <h2>Blog</h2>
-        <article style="margin-bottom: 20px;">
-            <h3>Cara Belajar HTML untuk Pemula</h3>
-            <p><small>27 Juli 2025</small></p>
-            <p>HTML adalah fondasi dari web. Mulailah dengan memahami struktur dasar, tag-tag penting, dan praktikkan langsung dengan membuat halaman sederhana.</p>
-        </article>
-        <article style="margin-bottom: 20px;">
-            <h3>Mengapa CSS Penting?</h3>
-            <p><small>20 Juli 2025</small></p>
-            <p>CSS membuat tampilan website menjadi menarik dan responsif. Pelajari selector, box model, dan layout agar website kamu lebih profesional.</p>
-        </article>
-    </section>
+        <!-- Projects Section -->
+        <section id="proyek" class="section" style="background: #f8fafc;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Proyek Saya</h2>
+                    <p>Beberapa proyek yang telah saya kerjakan</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="card project-card">
+                        <div class="project-image">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Aplikasi Cloud Desktop</h3>
+                        <p>Aplikasi desktop berbasis cloud yang memungkinkan pengguna untuk mengakses dan mengelola file mereka dari mana saja dengan interface yang intuitif.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card project-card">
+                        <div class="project-image">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Website Cloud</h3>
+                        <p>Platform website berbasis cloud dengan fitur manajemen konten yang mudah, hosting yang reliable, dan performa yang optimal.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card project-card">
+                        <div class="project-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Coming Soon</h3>
+                        <p>Proyek baru sedang dalam tahap pengembangan. Stay tuned untuk update terbaru!</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-clock"></i>
+                                In Development
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="kontak">
-        <h2>Kontak</h2>
-        <p>Email: acchaveam@gmail.com</p>
-    </section>
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Blog</h2>
+                    <p>Berbagi pengetahuan dan pengalaman dalam development</p>
+                </div>
+                <div class="blog-grid">
+                    <article class="card blog-card">
+                        <div class="blog-date">27 Juli 2025</div>
+                        <h3><a href="#">Cara Belajar HTML untuk Pemula</a></h3>
+                        <p>HTML adalah fondasi dari web development. Dalam artikel ini, saya akan membahas cara efektif belajar HTML dari dasar, mulai dari memahami struktur dasar, tag-tag penting, hingga tips praktik terbaik untuk pemula.</p>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-arrow-right"></i>
+                            Baca Selengkapnya
+                        </a>
+                    </article>
+                    <article class="card blog-card">
+                        <div class="blog-date">20 Juli 2025</div>
+                        <h3><a href="#">Mengapa CSS Penting dalam Web Development?</a></h3>
+                        <p>CSS bukan hanya tentang styling, tetapi juga tentang user experience. Artikel ini membahas pentingnya CSS dalam membuat website yang responsif, menarik, dan professional. Pelajari selector, box model, dan layout modern.</p>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-arrow-right"></i>
+                            Baca Selengkapnya
+                        </a>
+                    </article>
+                    <article class="card blog-card">
+                        <div class="blog-date">15 Juli 2025</div>
+                        <h3><a href="#">Setup Development Environment di Linux</a></h3>
+                        <p>Panduan lengkap untuk menyiapkan environment development web di Linux. Mulai dari instalasi web server, database, hingga konfigurasi PHP untuk development yang optimal.</p>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-arrow-right"></i>
+                            Baca Selengkapnya
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-    <footer>
-        © 2025 Angga Ariya Saputra. Dibuat dengan HTML & CSS.
-    </footer>
-</body>
-</html>
+        <!-- Contact Section -->
+        <section id="kontak" class="section contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Hubungi Saya</h2>
+                    <p>Mari berkolaborasi dan wujudkan ide-ide kreatif bersama</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>acchaveam@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Lokasi</h4>
+                                <p>Lumajang, Jawa Timur, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Sekolah</h4>
+                                <p>SMKN 1 Lumajang - RPL</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" method="POST" action="contact.php">
+                        <div class="form-group">
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" name="name" required placeholder="Nama lengkap Anda">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Subjek pesan">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fas fa-paper-plane"></i>
+                            Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com" class="social-link" target="_blank">
